@@ -10,6 +10,8 @@ Inspired by [Tania Rascia's article](https://www.taniarascia.com/setting-up-a-br
 4. [Shell](#shell)
 5. [Node](#node)
 6. [Git](#git)
+7. [Settings](#settings)
+8. [Application settings](#application-settings)
 
 ## Getting started
 Go through the setup assistant to define your language, time zone, Apple ID, and so on. Once done, update your macOS to get the latest security updates and patches.
@@ -81,8 +83,12 @@ nvm install node --reinstall-packages-from=node
 ## Git
 Create your `.gitconfig` file to set your [global configuration](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
 ```
-touch ~/.gitconfig
+vi ~/.gitconfig
 ```
+* Insert mode using `vi` = `i`
+* Leave insert mode = `esc`
+* Quit and save = `:wq`
+
 Insert your details and create some aliases (e.g. run `git s` instead of `git status`).
 ```
 [user]
@@ -94,15 +100,64 @@ Insert your details and create some aliases (e.g. run `git s` instead of `git st
   a      = add
   cm     = commit -m
   s      = status
-  pom    = push origin master
-  pog    = push origin gh-pages
-  puom   = pull origin master
-  puog   = pull origin gh-pages
   cob    = checkout -b
   co     = checkout
-
-  l      = log --oneline --decorate --graph
-  lall   = log --oneline --decorate --graph --all
-  ls     = log --oneline --decorate --graph --stat
-  lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
+  pu     = push -u origin
+  lg     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
 ```
+
+## Settings
+* To get the Home folder in the finder, press `CMD + SHIFT + H` and drag the home folder to the sidebar
+* Go to `Finder » Preferences » Advanced` and check `Show all filename extensions`
+* Make Google Chrome default browser
+
+### Dock
+* Automatically hide and show Dock
+* Show indicators for open applications
+
+### Keyboard
+* Key Repeat » Fast
+* Delay Until Repeat » Short
+* Turn keyboard backlight off after 10s of inactivity
+* Disable "Correct spelling automatically"
+* Disable "Capitalize words automatically"
+* Disable "Add period with double-space"
+* Disable "Use smart quotes and dashes"
+
+### Security & Privacy
+* Allow apps downloaded from App Store and identified developers
+* Turn FileVault On (makes sure SSD is securely encrypted)
+* Turn Firewall On (extra security measure)
+
+### Sharing
+* Change computer's name
+* Make sure all file sharing is disabled
+
+### Users & Groups
+* Add "Rectangle" to Login items
+* Remove Chrome from the Login items
+
+### Modify defaults
+```
+# Show Library folder
+chflags nohidden ~/Library
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Prevent left and right swipe through history in Chrome
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+```
+Restart Finder with `killall Finder`
+
+## Application settings
+### Visual Studio Code
+Use [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) to keep VS Code updated accross diferente machines.
+* Upload shortcut: `Shift + Option + U`
+* Download shortcut: `Shift + Option + D`

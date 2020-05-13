@@ -9,6 +9,7 @@ Inspired by [Tania Rascia's article](https://www.taniarascia.com/setting-up-a-br
 3. [Programs](#programs)
 4. [Shell](#shell)
 5. [Node](#node)
+6. [Git](#git)
 
 ## Getting started
 Go through the setup assistant to define your language, time zone, Apple ID, and so on. Once done, update your macOS to get the latest security updates and patches.
@@ -71,3 +72,5 @@ nvm install node --reinstall-packages-from=node
 * Install specific version of node (example): `nvm install X.X.X`
 * Set default version of node: `nvm alias default X.X.X`
 * Switch version of node: `nvm use X.X.X`
+
+## Git

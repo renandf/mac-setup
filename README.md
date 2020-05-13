@@ -8,6 +8,7 @@ Inspired by [Tania Rascia's article](https://www.taniarascia.com/setting-up-a-br
 2. [Homebrew](#homebrew)
 3. [Programs](#programs)
 4. [Shell](#shell)
+5. [Node](#node)
 
 # Getting started
 Go through the setup assistant to define your language, time zone, Apple ID, and so on. Once done, update your macOS to get the latest security updates and patches.
@@ -48,3 +49,25 @@ Catalina comes with **[zsh](http://zsh.sourceforge.net/)** as the default _shell
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+# Node
+Use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm/blob/master/README.md) to install Node.js. This allows you to easily switch between Node versions.
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+Restart the terminal and install Node's latest version.
+```
+nvm install node
+```
+After installation, you can confirm versions by running the commands `node -v` and `npm -v`.
+
+## Usage (for later)
+If you want to install a new version of Node.js and migrate npm packages from a previous version.
+```
+nvm install node --reinstall-packages-from=node
+```
+* List installed versions of node (via nvm): `nvm ls`
+* List available remote versions of node: `nvm ls-remote`
+* Install specific version of node (example): `nvm install X.X.X`
+* Set default version of node: `nvm alias default X.X.X`
+* Switch version of node: `nvm use X.X.X`

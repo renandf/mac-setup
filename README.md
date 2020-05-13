@@ -16,12 +16,17 @@ Go through the setup assistant to define your language, time zone, Apple ID, and
 
 ## Homebrew
 Install the [Homebrew](https://brew.sh/) package manager. Homebrew helps you install almost any package or app from the command line.
+
+* To check if Homebrew is installed and what version: `brew --version`
+* To install it:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
-After installation, update it:
+* To update it: `brew update`
+
+From time to time (maybe at the start of a new project), run this command to update Homebrew and everything you have installed with it.
 ```
-brew update
+brew update && brew upgrade && brew cleanup && brew doctor
 ```
 
 ## Programs
@@ -74,3 +79,30 @@ nvm install node --reinstall-packages-from=node
 * Switch version of node: `nvm use X.X.X`
 
 ## Git
+Create your `.gitconfig` file to set your [global configuration](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
+```
+touch ~/.gitconfig
+```
+Insert your details and create some aliases (e.g. run `git s` instead of `git status`).
+```
+[user]
+  name   = Firstname Lastname
+  email  = you@example.com
+[github]
+  user   = username
+[alias]
+  a      = add
+  cm     = commit -m
+  s      = status
+  pom    = push origin master
+  pog    = push origin gh-pages
+  puom   = pull origin master
+  puog   = pull origin gh-pages
+  cob    = checkout -b
+  co     = checkout
+
+  l      = log --oneline --decorate --graph
+  lall   = log --oneline --decorate --graph --all
+  ls     = log --oneline --decorate --graph --stat
+  lt     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
+```

@@ -7,9 +7,9 @@ Inspired by [Tania Rascia's article](https://www.taniarascia.com/setting-up-a-br
 1. [Getting started](#getting-started)
 2. [Homebrew](#homebrew)
 3. [Programs](#programs)
-4. [Shell](#shell)
-5. [Node](#node)
-6. [Git](#git)
+4. [Git](#git)
+5. [Shell](#shell)
+6. [Node](#node)
 7. [Settings](#settings)
 8. [Application settings](#application-settings)
 
@@ -52,59 +52,6 @@ brew cask install \
   iterm2
 ```
 
-## Shell - Oh My Zsh
-Catalina comes with **[zsh](http://zsh.sourceforge.net/)** as the default _shell_. Install **[Oh My Zsh](https://ohmyz.sh/)** for sensible defaults and themes.
-```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### Spaceship Prompt
-**[Spaceship](https://github.com/denysdovhan/spaceship-prompt)** is a minimalistic, powerful and extremely customizable Zsh prompt.
-
-Clone the repo:
-```
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-```
-Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
-```
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-```
-Open your `.zshrc` (If using VS Code, `code ~/.zshrc`) and set `ZSH_THEME="spaceship"` in there.
-
-### Dracula Theme
-**[Dracula](https://draculatheme.com/iterm)** is a nice dark theme available for iTerm (and [many others](https://draculatheme.com/)).
-Clone the repo locally into a folder of your choice:
-```
-git clone https://github.com/dracula/iterm.git
-```
-1. Go to *iTerm2 > Preferences > Profiles > Colors Tab*
-2. Open the *Color Presets...* drop-down in the bottom right corner
-3. Select *Import...* from the list
-4. Select the `Dracula.itermcolors` file
-5. Select the *Dracula* from Color Presets...
-
-## Node
-Use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm/blob/master/README.md) to install Node.js. This allows you to easily switch between Node versions.
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-```
-Restart the terminal and install Node's latest version.
-```
-nvm install node
-```
-After installation, you can confirm versions by running the commands `node -v` and `npm -v`.
-
-### Usage (for later)
-If you want to install a new version of Node.js and migrate npm packages from a previous version.
-```
-nvm install node --reinstall-packages-from=node
-```
-* List installed versions of node (via nvm): `nvm ls`
-* List available remote versions of node: `nvm ls-remote`
-* Install specific version of node (example): `nvm install X.X.X`
-* Set default version of node: `nvm alias default X.X.X`
-* Switch version of node: `nvm use X.X.X`
-
 ## Git
 Create your `.gitconfig` file to set your [global configuration](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
 ```
@@ -130,6 +77,106 @@ Insert your details and create some aliases (e.g. run `git s` instead of `git st
   pu     = push -u origin
   lg     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
 ```
+
+## Shell - Oh My Zsh
+Catalina comes with **[zsh](http://zsh.sourceforge.net/)** as the default _shell_. Install **[Oh My Zsh](https://ohmyz.sh/)** for sensible defaults and themes.
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Spaceship Prompt
+**[Spaceship](https://github.com/denysdovhan/spaceship-prompt)** is a minimalistic, powerful and extremely customizable Zsh prompt.
+
+Clone the repo:
+```
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+```
+Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
+```
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+Open your `.zshrc` (If using VS Code, `code ~/.zshrc`) and set `ZSH_THEME="spaceship"` in there. With still open, add the following (optional) settings at the end:
+```
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+SPACESHIP_USER_SHOW=always
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+```
+
+### FiraCoda Font
+Spaceship requires the font **[FiraCode](https://github.com/tonsky/FiraCode/releases)** to display some nice icons. Download the latest `.zip` file from their [releases page](https://github.com/tonsky/FiraCode/releases) and [install](https://support.apple.com/en-us/HT201749) the `.ttf` files into your Mac.
+
+Then go to *iTerm2 > Preferences > Profiles > Text* tab and change the font to `Fira Coda`. Optionally, increase the font size (**14** looks good).
+
+### Dracula Theme
+**[Dracula](https://draculatheme.com/iterm)** is a nice dark theme available for iTerm (and [many others](https://draculatheme.com/)).
+Clone the repo locally into a folder of your choice:
+```
+git clone https://github.com/dracula/iterm.git
+```
+1. Go to *iTerm2 > Preferences > Profiles > Colors* tab
+2. Open the *Color Presets...* drop-down in the bottom right corner
+3. Select *Import...* from the list
+4. Select the `Dracula.itermcolors` file
+5. Select the *Dracula* from Color Presets...
+
+### ZSH Plugins
+[Zinit](https://github.com/zdharma/zinit#zinit) is a flexible and fast Zshell plugin manager. To install it, use:
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+```
+Open `.zshrc` again and go to the very end, after the `### End of Zinit's installer chunk` line just added by Zinit. Add the following lines:
+```
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+```
+
+What those plugins do?
+* `zdharma/fast-syntax-highlighting`: Adds syntax highlighting while typing
+* `zsh-users/zsh-autosuggestions`: Suggests commands based on your prompt's history as you type
+* `zsh-users/zsh-completions`: Adds *completions* to popular tools (e.g. Yarn, Homebrew, NVM, Node) so you just need to press TAB
+
+### ZSH inside VS Code
+To use *Oh My Zsh* inside VS Code's integrated terminal, open `settings.json` and set:
+```
+"terminal.integrated.shell.osx": "/bin/zsh"
+```
+
+## Node
+Use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm/blob/master/README.md) to install Node.js. This allows you to easily switch between Node versions.
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+Restart the terminal and install Node's latest version.
+```
+nvm install node
+```
+After installation, you can confirm versions by running the commands `node -v` and `npm -v`.
+
+### Usage (for later)
+If you want to install a new version of Node.js and migrate npm packages from a previous version.
+```
+nvm install node --reinstall-packages-from=node
+```
+* List installed versions of node (via nvm): `nvm ls`
+* List available remote versions of node: `nvm ls-remote`
+* Install specific version of node (example): `nvm install X.X.X`
+* Set default version of node: `nvm alias default X.X.X`
+* Switch version of node: `nvm use X.X.X`
 
 ## Settings
 * To get the Home folder in the finder, press `CMD + SHIFT + H` and drag the home folder to the sidebar

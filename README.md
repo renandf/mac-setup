@@ -61,21 +61,23 @@ vi ~/.gitconfig
 * Leave insert mode = `esc`
 * Quit and save = `:wq`
 
-Insert your details and create some aliases (e.g. run `git s` instead of `git status`).
+Insert your details and create some aliases (e.g. run `git s` instead of `git status`). Create a `~/.gitignore_global` with only `.DS_Store` in it.
 ```
 [user]
   name   = Firstname Lastname
   email  = you@example.com
 [github]
   user   = username
+[core]
+  excludesfile = ~/.gitignore_global
 [alias]
   a      = add
   cm     = commit -m
   s      = status
-  cob    = checkout -b
   co     = checkout
+  cb     = checkout -b
   pu     = push -u origin
-  lg     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset'
+  lg     = log --graph --decorate --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --max-count=30
 ```
 
 ## Shell - Oh My Zsh

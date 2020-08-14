@@ -151,7 +151,9 @@ What those plugins do?
 * `zsh-users/zsh-completions`: Adds *completions* to popular tools (e.g. Yarn, Homebrew, NVM, Node) so you just need to press TAB
 
 ### ZSH inside VS Code
-To use *Oh My Zsh* with the font *Fira Code* inside VS Code's integrated terminal, open `settings.json` and set (search and replace since those settings are already there):
+If you're using [Settings Sync](https://github.com/renandf/mac-setup/blob/master/README.md#visual-studio-code) and already set this in the past, skip this step.
+
+To use *Oh My Zsh* with the font *Fira Code* inside VS Code's integrated terminal, open `settings.json` and set (search and update since these settings are already there):
 ```
 "terminal.integrated.shell.osx": "/bin/zsh",
 "editor.fontFamily": "Fira Code",

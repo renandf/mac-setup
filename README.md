@@ -52,11 +52,36 @@ brew cask install \
   iterm2
 ```
 
-## Shell
+## Shell - Oh My Zsh
 Catalina comes with **[zsh](http://zsh.sourceforge.net/)** as the default _shell_. Install **[Oh My Zsh](https://ohmyz.sh/)** for sensible defaults and themes.
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+### Spaceship Prompt
+**[Spaceship](https://github.com/denysdovhan/spaceship-prompt)** is a minimalistic, powerful and extremely customizable Zsh prompt.
+
+Clone the repo:
+```
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+```
+Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
+```
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+Open your `.zshrc` (If using VS Code, `code ~/.zshrc`) and set `ZSH_THEME="spaceship"` in there.
+
+### Dracula Theme
+**[Dracula](https://draculatheme.com/iterm)** is a nice dark theme available for iTerm (and [many others](https://draculatheme.com/)).
+Clone the repo locally into a folder of your choice:
+```
+git clone https://github.com/dracula/iterm.git
+```
+1. Go to *iTerm2 > Preferences > Profiles > Colors Tab*
+2. Open the *Color Presets...* drop-down in the bottom right corner
+3. Select *Import...* from the list
+4. Select the `Dracula.itermcolors` file
+5. Select the *Dracula* from Color Presets...
 
 ## Node
 Use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm/blob/master/README.md) to install Node.js. This allows you to easily switch between Node versions.

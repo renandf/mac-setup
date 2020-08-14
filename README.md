@@ -116,7 +116,7 @@ SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 ```
 
-### FiraCoda Font
+### Fira Code Font
 Spaceship requires the font **[FiraCode](https://github.com/tonsky/FiraCode/releases)** to display some nice icons. Download the latest `.zip` file from their [releases page](https://github.com/tonsky/FiraCode/releases) and [install](https://support.apple.com/en-us/HT201749) the `.ttf` files into your Mac.
 
 Then go to *iTerm2 > Preferences > Profiles > Text* tab and change the font to `Fira Coda`. Optionally, increase the font size (**14** looks good).
@@ -151,9 +151,11 @@ What those plugins do?
 * `zsh-users/zsh-completions`: Adds *completions* to popular tools (e.g. Yarn, Homebrew, NVM, Node) so you just need to press TAB
 
 ### ZSH inside VS Code
-To use *Oh My Zsh* inside VS Code's integrated terminal, open `settings.json` and set:
+To use *Oh My Zsh* with the font *Fira Code* inside VS Code's integrated terminal, open `settings.json` and set (search and replace since those settings are already there):
 ```
-"terminal.integrated.shell.osx": "/bin/zsh"
+"terminal.integrated.shell.osx": "/bin/zsh",
+"editor.fontFamily": "Fira Code",
+"editor.fontLigatures": true,
 ```
 
 ## Node

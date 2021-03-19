@@ -44,7 +44,7 @@ brew install \
   yarn
 
 # Cask
-brew cask install \
+brew install --cask \
   visual-studio-code \
   google-chrome \
   firefox \

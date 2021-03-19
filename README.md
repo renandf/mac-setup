@@ -34,8 +34,8 @@ brew update && brew upgrade && brew cleanup && brew doctor
 ## Programs
 Below is a list of useful programs you might want to install and you can use Homebrew to do it.
 `brew cask` installs macOS apps, fonts, plugins, and other non-open source software. Remove the lines you don't want from the command and run it in your Terminal.
-Other _Core_: make, travis
-Other _Cask_: opera, docker, vlc, slack, keybase, spotify, postgres, postico, postman
+- Other _Core_: make, travis
+- Other _Cask_: opera, docker, vlc, slack, keybase, spotify, postgres, postico, postman
 
 ```
 # Core
@@ -81,7 +81,7 @@ Insert your details and create some aliases (e.g. run `git s` instead of `git st
 ```
 
 ## Shell - Oh My Zsh
-Catalina comes with **[zsh](http://zsh.sourceforge.net/)** as the default _shell_. Install **[Oh My Zsh](https://ohmyz.sh/)** for sensible defaults and themes.
+macOS Big Sur comes with **[Zsh](http://zsh.sourceforge.net/)** as the default _shell_. Install **[Oh My Zsh](https://ohmyz.sh/)** for sensible defaults and themes.
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```

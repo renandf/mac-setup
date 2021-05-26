@@ -22,7 +22,7 @@ Install the [Homebrew](https://brew.sh/) package manager. Homebrew helps you ins
 * To check if Homebrew is installed and what version: `brew --version`
 * To install it:
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 * To update it: `brew update`
 

@@ -106,8 +106,9 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   hg            # Mercurial section (hg_branch  + hg_status)
   exec_time     # Execution time
-  line_sep      # Line break
+  venv          # virtualenv section
   vi_mode       # Vi-mode indicator
+  line_sep      # Line break
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character

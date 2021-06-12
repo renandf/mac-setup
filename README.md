@@ -240,3 +240,19 @@ Restart Finder with `killall Finder`
 Use [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) to keep VS Code updated accross diferente machines.
 * Upload shortcut: `Shift + Option + U`
 * Download shortcut: `Shift + Option + D`
+
+### Oh My Zsh
+Navigate to Oh My Zsh folder with `cd ~./oh-my-zsh` and inside the _Custom_ folder you can use/create files to organise _aliases_ and _shortcuts_. For example you can have a file `custom.zsh` with content similar to:
+```
+# Aliases
+alias python='python3'
+alias pip='pip3'
+
+# Shortcuts
+
+# cd $p1
+p1=~/Documents/topfolder/subfolder/project1
+
+# cd $p2
+p2=~/Documents/topfolder/subfolder/project2
+```

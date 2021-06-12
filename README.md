@@ -8,7 +8,7 @@ Inspired by [Tania Rascia's article](https://www.taniarascia.com/setting-up-a-br
 2. [Homebrew](#homebrew)
 3. [Programs](#programs)
 4. [Git](#git)
-5. [Shell](#shell)
+5. [Shell - Oh My Zsh](#shell---oh-my-zsh)
 6. [Node](#node)
 7. [Settings](#settings)
 8. [Application settings](#application-settings)

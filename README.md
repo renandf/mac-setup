@@ -139,14 +139,21 @@ git clone https://github.com/dracula/iterm.git
 ### ZSH Plugins
 [Zinit](https://github.com/zdharma-continuum/zinit) is a flexible and fast Zshell plugin manager. To install it, use:
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+sh -c "$(curl -fsSL https://git.io/zinit-install)"
 ```
+This will install Zinit in `~/.local/share/zinit/zinit.git`. `.zshrc` will be updated with three lines of code that will be added to the bottom. The lines will be sourcing `zinit.zsh` and setting up completion for command `zinit`.
+
+After installing and reloading the shell compile Zinit with `zinit self-update`.
+
+----
+
 Open `.zshrc` again and go to the very end, after the `### End of Zinit's installer chunk` line just added by Zinit. Add the following lines:
 ```
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 ```
+----
 
 What those plugins do?
 * `zdharma/fast-syntax-highlighting`: Adds syntax highlighting while typing

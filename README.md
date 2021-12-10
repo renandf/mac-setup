@@ -137,7 +137,7 @@ git clone https://github.com/dracula/iterm.git
 5. Select the *Dracula* from Color Presets...
 
 ### ZSH Plugins
-[Zinit](https://github.com/zdharma/zinit#zinit) is a flexible and fast Zshell plugin manager. To install it, use:
+[Zinit](https://github.com/zdharma-continuum/zinit) is a flexible and fast Zshell plugin manager. To install it, use:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 ```

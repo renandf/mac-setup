@@ -145,18 +145,15 @@ This will install Zinit in `~/.local/share/zinit/zinit.git`. `.zshrc` will be up
 
 After installing and reloading the shell compile Zinit with `zinit self-update`.
 
-----
-
 Open `.zshrc` again and go to the very end, after the `### End of Zinit's installer chunk` line just added by Zinit. Add the following lines:
 ```
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 ```
-----
 
 What those plugins do?
-* `zdharma/fast-syntax-highlighting`: Adds syntax highlighting while typing
+* `zinit light zdharma-continuum/fast-syntax-highlighting`: Adds syntax highlighting while typing
 * `zsh-users/zsh-autosuggestions`: Suggests commands based on your prompt's history as you type
 * `zsh-users/zsh-completions`: Adds *completions* to popular tools (e.g. Yarn, Homebrew, NVM, Node) so you just need to press TAB
 

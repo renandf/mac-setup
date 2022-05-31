@@ -170,7 +170,7 @@ To use *Oh My Zsh* with the font *Fira Code* inside VS Code's integrated termina
 ## Node
 Use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm/blob/master/README.md) to install Node.js. This allows you to easily switch between Node versions. (Check nvm version from their website and update before running it)
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 Restart the terminal and install Node's latest version.
 ```

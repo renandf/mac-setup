@@ -6,7 +6,7 @@ Inspired by [Tania Rascia's article](https://www.taniarascia.com/setting-up-a-br
 ## Steps
 1. [Getting started](#getting-started)
 2. [Homebrew](#homebrew)
-3. [Programs](#programs)
+3. [Install software via the terminal](#install-software-via-the-terminal)
 4. [Git](#git)
 5. [Shell - Oh My Zsh](#shell---oh-my-zsh)
 6. [Node](#node)
@@ -31,7 +31,7 @@ From time to time (maybe at the start of a new project), run this command to upd
 brew update && brew upgrade && brew cleanup && brew doctor
 ```
 
-## Programs
+## Install software via the terminal
 Below is a list of useful programs you might want to install and you can use Homebrew to do it.
 `brew cask` installs macOS apps, fonts, plugins, and other non-open source software. Remove the lines you don't want from the command and run it in your Terminal.
 - Other _Core_: [gh](https://cli.github.com/), make, travis

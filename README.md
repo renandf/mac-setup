@@ -91,13 +91,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 Clone the repo:
 ```
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ```
 Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
 ```
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
-Open your `.zshrc` (If using VS Code, `code ~/.zshrc`) and set `ZSH_THEME="spaceship"` in there. With still open, add the following (optional) settings at the end:
+Open your `.zshrc` (If using VS Code, `code ~/.zshrc`) and set `ZSH_THEME="spaceship"` in there. With it still open, add the following (optional) settings at the end:
 ```
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section

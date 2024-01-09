@@ -83,7 +83,7 @@ Insert your details and create some aliases (e.g. run `git s` instead of `git st
 ## Shell - Oh My Zsh
 macOS Big Sur comes with **[Zsh](http://zsh.sourceforge.net/)** as the default _shell_. Install **[Oh My Zsh](https://ohmyz.sh/)** for sensible defaults and themes.
 ```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### Spaceship Prompt

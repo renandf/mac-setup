@@ -130,7 +130,7 @@ Clone the repo locally into a folder of your choice:
 ```
 git clone https://github.com/dracula/iterm.git
 ```
-1. Go to *iTerm2 > Preferences > Profiles > Colors* tab
+1. Go to *iTerm2 > Settings... > Profiles > Colors* tab
 2. Open the *Color Presets...* drop-down in the bottom right corner
 3. Select *Import...* from the list
 4. Select the `Dracula.itermcolors` file
@@ -191,7 +191,7 @@ nvm install node --reinstall-packages-from=node
 
 ## Settings
 * To get the Home folder in the finder, press `CMD + SHIFT + H` and drag the home folder to the sidebar
-* Go to `Finder » Preferences » Advanced` and check `Show all filename extensions`
+* Go to `Finder » Settings... » Advanced` and check `Show all filename extensions`
 * Make Google Chrome default browser
 
 ### Dock

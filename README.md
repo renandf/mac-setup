@@ -122,7 +122,7 @@ SPACESHIP_CHAR_SUFFIX=" "
 ### Fira Code Font
 Spaceship requires the font **[FiraCode](https://github.com/tonsky/FiraCode/releases)** to display some nice icons. Download the latest `.zip` file from their [releases page](https://github.com/tonsky/FiraCode/releases) and [install](https://support.apple.com/en-us/HT201749) the `.ttf` files into your Mac.
 
-Then go to *iTerm2 > Preferences > Profiles > Text* tab and change the font to `Fira Coda`. Optionally, increase the font size (**14** looks good).
+Then go to *iTerm2 > Settings... > Profiles > Text* tab and change the font to `Fira Code`. Optionally, increase the font size (**14** looks good).
 
 ### Dracula Theme
 **[Dracula](https://draculatheme.com/iterm)** is a nice dark theme available for iTerm (and [many others](https://draculatheme.com/)).

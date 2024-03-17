@@ -35,7 +35,7 @@ brew update && brew upgrade && brew cleanup && brew doctor
 Below is a list of useful programs you might want to install and you can use Homebrew to do it.
 `brew cask` installs macOS apps, fonts, plugins, and other non-open source software. Remove the lines you don't want from the command and run it in your Terminal.
 - Other _Core_: [gh](https://cli.github.com/), make, travis
-- Other _Cask_: opera, docker, vlc, slack, keybase, spotify, postgres, postico, postman
+- Other _Cask_: opera, docker, vlc, slack, keybase, spotify, postgres, postico, postman, optipng
 
 ```
 # Core
@@ -246,7 +246,7 @@ Use [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.cod
 * Download shortcut: `Shift + Option + D`
 
 ### Oh My Zsh
-Navigate to Oh My Zsh folder with `cd ~./oh-my-zsh` and inside the _Custom_ folder you can use/create files to organise _aliases_ and _shortcuts_. For example you can have a file `custom.zsh` with content similar to:
+Navigate to Oh My Zsh folder with `cd ~/.oh-my-zsh` and inside the `custom` folder you can use/create files to organise _aliases_ and _shortcuts_. For example you can have a file `custom.zsh` with content similar to:
 ```
 # Aliases
 alias python='python3'
